@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TradeRofit.Core\FileUploader.Core.csproj" />
-    <ProjectReference Include="..\TradeRofit.Entities\FileUploader.Entities.csproj" />
+    <ProjectReference Include="..\FileUploader.Core\FileUploader.Core.csproj" />
+    <ProjectReference Include="..\FileUploader.Entities\FileUploader.Entities.csproj" />
   </ItemGroup>
 
 </Project>
