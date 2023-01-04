@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploader.DAL", "FileUpl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploader.Entities", "FileUploader.Entities\FileUploader.Entities.csproj", "{A2884DC8-6439-4FDE-BAB4-659EE176CF0B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploader.TokenWorker", "FileUploader.TokenWorker\FileUploader.TokenWorker.csproj", "{90B87A86-CD7F-4820-949E-D9A2E72DBD48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A2884DC8-6439-4FDE-BAB4-659EE176CF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2884DC8-6439-4FDE-BAB4-659EE176CF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2884DC8-6439-4FDE-BAB4-659EE176CF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B87A86-CD7F-4820-949E-D9A2E72DBD48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B87A86-CD7F-4820-949E-D9A2E72DBD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B87A86-CD7F-4820-949E-D9A2E72DBD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B87A86-CD7F-4820-949E-D9A2E72DBD48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

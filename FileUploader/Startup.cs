@@ -1,4 +1,5 @@
 using FileUploader.API.Mapper;
+using FileUploader.API.Middlewares;
 using FileUploader.Business.Interfaces;
 using FileUploader.Business.Models.Configures;
 using FileUploader.Business.Services;
@@ -43,6 +44,7 @@ namespace FileUploader
             services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
             services.AddScoped(typeof(IHomeService), typeof(HomeService));
             services.AddScoped(typeof(IUserService), typeof(UserService));
+            services.AddScoped(typeof(IUploadService), typeof(UploadService));
 
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddHttpContextAccessor();
@@ -80,6 +82,8 @@ namespace FileUploader
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMiddleware<UserMiddleware>();
 
             app.UseHttpsRedirection();
 
