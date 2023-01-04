@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LinqKit" Version="1.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TradeRofit.Core\FileUploader.Core.csproj" />
+    <ProjectReference Include="..\TradeRofit.Entities\FileUploader.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
