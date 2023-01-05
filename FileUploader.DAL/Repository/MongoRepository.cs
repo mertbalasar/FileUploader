@@ -31,6 +31,24 @@ namespace FileUploader.DAL.Repository
         }
 
         #region [ Processes ]
+        public ServiceResponse<IAggregateFluent<TCollection>> Aggregate(AggregateOptions options = null)
+        {
+            var response = new ServiceResponse<IAggregateFluent<TCollection>>();
+
+            try
+            {
+                var aggregate = _mongoCollection.Aggregate(options);
+                response.Result = aggregate;
+            }
+            catch (Exception e)
+            {
+                response.Code = 500;
+                response.Message = e.Message;
+            }
+
+            return response;
+        }
+
         public async Task<ServiceResponse<TCollection>> InsertOneAsync(TCollection record)
         {
             var response = new ServiceResponse<TCollection>();

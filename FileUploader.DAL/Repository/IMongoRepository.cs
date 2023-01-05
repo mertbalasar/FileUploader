@@ -11,6 +11,7 @@ namespace FileUploader.DAL.Repository
 {
     public interface IMongoRepository<TCollection>
     {
+        ServiceResponse<IAggregateFluent<TCollection>> Aggregate(AggregateOptions options = null);
         Task<ServiceResponse<TCollection>> InsertOneAsync(TCollection record);
         Task<ServiceResponse<List<TCollection>>> InsertManyAsync(List<TCollection> records);
         Task<ServiceResponse<TCollection>> FindByIdAsync(string id);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FileUploader.Business.Models.EntitiesModels;
 using FileUploader.Core.Requests;
 using FileUploader.Entities.Models;
+using FileUploader.Entities.LookUpModels;
 
 namespace FileUploader.API.Mapper
 {
@@ -17,6 +18,9 @@ namespace FileUploader.API.Mapper
             CreateMap<UserSignUpRequest, User>();
             CreateMap<User, UserModel>();
             CreateMap<UserModel, User>();
+
+            CreateMap<FilesLookUp, FilesModel>();
+            CreateMap<FilesModel, FilesLookUp>();
         }
     }
 }

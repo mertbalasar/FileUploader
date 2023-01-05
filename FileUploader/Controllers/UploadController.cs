@@ -29,5 +29,13 @@ namespace FileUploader.API.Controllers
 
             return APIResponse(response);
         }
+
+        [HttpGet, Route("")]
+        public IActionResult GetFiles()
+        {
+            var response = _uploadService.GetFiles();
+
+            return APIResponse(response);
+        }
     }
 }
