@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -36,6 +37,20 @@ namespace FileUploader.API.Controllers
             var response = _uploadService.GetFiles();
 
             return APIResponse(response);
+        }
+
+        [HttpGet, Route("getByPath")]
+        public IActionResult GetFile([FromForm] string path)
+        {
+            try
+            {
+                var stream = new FileStream(path, FileMode.Open);
+                return File(stream, "application/octet-stream", "{{filename.ext}}");
+            }
+            catch (Exception e)
+            {
+                return NotFound(new { Message = e.Message });
+            }
         }
     }
 }
